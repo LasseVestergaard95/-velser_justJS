@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      "use strict";
+
+      function greeting(firstName) {
+        return `Hello ${firstName}`;
+      }
+      const sayHi = greeting;
+      console.log("greeting", greeting("Lasse"));
+      console.log("sayHi", sayHi("Bo"));
+
+      // **************************
+
+      const person3 = {
+        firstName: "Harry",
+        lastName: "Potter",
+        hired: false,
+      };
+
+      const person4 = {
+        firstName: "Fred",
+        lastName: "Weasley",
+        hired: false,
+      };
+
+      function hire(person) {
+        person.hired = true;
+      }
+
+      function fire(person) {
+        person.hired = false;
+      }
+
+      function fireOrHire(action, person) {
+        action(person);
+      }
+
+      console.log(person4);
+      fireOrHire(hire, person4);
+      console.log(person4);
+
+
+    //   Nedenstående funktion er god til at bruge når du skal have timer på.
+      setTimeout(timesUp, 5000, "Lasse")
+      function timesUp (personen){
+        console.log("tiden er gået", personen)
+      }
+    </script>
+  </body>
+</html>

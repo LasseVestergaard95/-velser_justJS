@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      "no strict";
+
+      const person1 = {
+        firstName: "Lasse",
+        age: 28,
+        student: true,
+      };
+      console.log(person1.lastName);
+
+      //Her tilføjer vi et propert til vores person onjekt
+      person1.lastName = "Vestergaard";
+      console.log(person1.lastName);
+      person1.lastName = undefined;
+      console.log(person1.lastName);
+      console.log("person1.middleName:", person1.middleName);
+      //   Her fjerneer vi efternavn men property er der stadig
+      delete person1.lastname;
+      console.log(person1.lastName);
+      console.log(person1);
+
+      //   ****************************************
+      console.log("**************************");
+
+      console.log(person1);
+      person1.age++;
+      console.log(person1);
+
+      const person2 = person1;
+      person2.firstName = "Bob";
+      console.log(person1.firstName);
+
+      //   ****************************************
+      console.log("**************************");
+
+      const student1 = {
+        firstName: "harry",
+        lastName: "potter",
+      };
+      const student2 = student1;
+
+      if (student1 === student2) {
+        console.log("they are the same");
+      } else {
+        console.log("they are not the same");
+      }
+
+      //   ****************************************
+      console.log("**************************");
+
+      const student3 = {
+        firstName: "harry",
+        lastName: "potter",
+      };
+      const student4 = {
+        firstName: "harry",
+        lastName: "potter",
+      };
+
+      if (student3 === student4) {
+        console.log("they are the same");
+      } else {
+        console.log("they are not the same");
+      }
+
+      //   ****************************************
+      console.log("**************************");
+
+      student3.firstName=student4.firstName;
+      student3.lastName=student4.lastName;
+      if (student3 === student4) {
+        console.log("they are the same");
+      } else {
+        console.log("they are not the same");
+      }
+    </script>
+  </body>
+</html>

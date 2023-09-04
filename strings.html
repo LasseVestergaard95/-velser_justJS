@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      "use strict";
+
+      let name = "Lasse";
+      let pet = "Spencer";
+
+      console.log(`My name is ${name}.\nI have a cat called ${pet}`);
+
+      //   ****************************************
+      console.log("***************************");
+
+      const name1 = "Albus percival Wulfric Brian Dumbledore";
+      console.log(name1.length);
+      console.log(name1[2]);
+      console.log(name1[6]);
+      console.log(name1.indexOf("D"));
+      console.log(name1.lastIndexOf("e"));
+
+      //   ****************************************
+      console.log("***************************");
+
+      const str1 = "There is   space here \ntest";
+      const str2 = str1.trim();
+
+      console.log(str2);
+
+      //   ****************************************
+      console.log("***************************");
+
+      const fullName = "Lasse Bla Vestergaard";
+      const firstName = fullName.substring(0, 5);
+      console.log(firstName);
+
+      //   ****************************************
+      console.log("***************************");
+      const name2 = "Albus percival Wulfric Brian Dumbledore";
+
+      console.log(name2.substring(0,5)) //Albus
+      console.log(name2.substring(29)) //Dumbledore
+      console.log(name2.substring(15,22)) //Wulfric
+      console.log(name2.substring(14,23)) //" Wulfric ""
+      console.log(name2.substring(25,28)) //ian
+      console.log(name2.substring(2,5)) //bus
+
+
+      const name123 = "lasse vestergaard"
+      console.log(name123.charAt(0).toUpperCase() + name123.slice(1))
+
+
+    </script>
+  </body>
+</html>

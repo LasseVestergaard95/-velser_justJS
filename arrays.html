@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      "use strict";
+
+
+// -push tilføjer en eller flere elementer til SIDST i dit Array
+// -pop fjerner det sidste element i dit array
+// -unshift tilføjer i starten af dit array
+// -shift fjerner fra starten af dit array
+
+      const people = ["harry", "mark", "hermione"];
+      let result;
+      result = people.push("Draco");
+
+      console.log("result", result);
+      console.log("people", people);
+
+      console.log("******************");
+      result = people.pop();
+      console.log("result", result);
+      console.log("people", people);
+
+      console.log("******************");
+      result = people.push('neville');
+      console.log("result", result);
+      console.log("people", people);
+
+      console.log("******************");
+      result = people.push('Luna');
+      console.log("result", result);
+      console.log("people", people);
+
+      console.log("******************");
+      result = people.slice(0,3);
+      console.log("result", result);
+      console.log("people", people);
+
+      console.log("******************");
+      result = people.splice(1,0,"cho");
+      console.log("result", result);
+      console.log("people", people);
+
+      console.log("******************");
+      people[1]= 'Ginny';
+      console.log("result", result);
+      console.log("people", people);
+
+      console.log("******************");
+      result = people.push('fred', 'george');
+      console.log("result", result);
+      console.log("people", people);
+
+      console.log("******************");
+      result = people.indexOf('fred');
+      console.log("result", result);
+      console.log("people", people);
+
+      console.log("******************");
+      result = people.splice(result,1);
+      console.log("result", result);
+      console.log("people", people);
+
+// 3 typer af måder hvorpå du kan lave en string om til et array. HUSK at du også kan gøre det omvendt så du tager dit array og laver det om til string. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join
+
+const str="abcdefghijklmn";
+
+const arr1=str.split("");
+console.log(arr1)
+
+const arr2=Array.from(str)
+console.log(arr2)
+
+const arr3=[...str]
+console.log(arr2)
+
+
+    </script>
+  </body>
+</html>
