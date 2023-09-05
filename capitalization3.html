@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      "use strict";
+
+      let name = "Peter";
+
+      console.log(name.substring(0, 2) + name.substring(2, 3).toUpperCase() + name.substring(3).toLowerCase());
+      console.log(name[0].toUpperCase() + name.substring(1));
+
+      let theText = "Jeg er en tekst hvor nogle ord skal skiftes ud med nogle andre ord";
+
+      console.log(theText.split());
+      console.log(theText.replaceAll("ord", "ting"));
+
+      let sætning = "Jeg er en tekst der skal findes ord i";
+      sætning.split( );
+      const ord = ["ord", "tekst"];
+      console.log(`The word "${ord}" ${sætning.includes(ord) ? 'is' : 'is not'} in the sentence`);
+    </script>
+  </body>
+</html>
